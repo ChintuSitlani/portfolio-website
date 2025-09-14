@@ -1,6 +1,6 @@
+import BannerArrow from "../BannerArrow/BannerArrow";
 import HeroContent from "./HeroContent";
 import HeroStats from "./HeroStats";
-import BannerArrow from "../BannerArrow/ScrollDownArrow";
 
 
 export default function Hero() {
