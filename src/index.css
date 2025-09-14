@@ -1,1 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
 @import "tailwindcss";
+
+/* Base animation */
+.slide-up-and-fade {
+
+    opacity: 0;
+    transform: translateY(40px);
+    will-change: opacity, transform;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+    /* smooth updates */
+}
+
+/* Active state when in view */
+.slide-up-and-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger effect (paragraph appears after title) */
+.slide-up-and-fade:nth-child(2) {
+    transition-delay: 0.3s;
+    /* paragraph comes after title */
+}
