@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 
 const Background: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
+    const animationFrameId = useRef<number>(0);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -21,22 +22,25 @@ const Background: React.FC = () => {
 
         let stars: Star[] = [];
 
+        // Regular function instead of useCallback
         const createStars = () => {
-            const numStars = Math.min(Math.floor(window.innerWidth / 20), 120); // cap at 120
+            const numStars = Math.min(Math.floor(window.innerWidth / 20), 120);
             stars = [];
             for (let i = 0; i < numStars; i++) {
                 stars.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
                     radius: Math.random() * 1.2 + 0.3,
-                    speed: Math.random() * 0.4 + 0.2, // keep speed same
+                    speed: Math.random() * 0.4 + 0.2,
                     alpha: Math.random(),
                     alphaChange: (Math.random() * 0.02) - 0.01,
                 });
             }
         };
 
+        // Regular function instead of useCallback
         const resizeCanvas = () => {
+            if (!canvas) return;
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             createStars();
@@ -52,6 +56,8 @@ const Background: React.FC = () => {
         resizeCanvas();
 
         const animate = () => {
+            if (!ctx || !canvas) return;
+
             ctx.fillStyle = "black";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -72,18 +78,21 @@ const Background: React.FC = () => {
                 if (star.y > canvas.height) {
                     star.y = 0;
                     star.x = Math.random() * canvas.width;
-                    star.radius = Math.random() * 1.2 + 0.3; // new random size
-                    star.alpha = Math.random(); // reset brightness
+                    star.radius = Math.random() * 1.2 + 0.3;
+                    star.alpha = Math.random();
                 }
             });
 
-            requestAnimationFrame(animate);
+            animationFrameId.current = requestAnimationFrame(animate);
         };
 
-        animate();
+        animationFrameId.current = requestAnimationFrame(animate);
 
         window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            cancelAnimationFrame(animationFrameId.current);
+        };
     }, []);
 
     return (
