@@ -1,19 +1,20 @@
 import "./App.css";
 import Background from "./components/Background/Backround";
 import Hero from "./components/Hero/Hero";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="relative text-white">
       {/* Starfield Background (fixed) */}
       <Background />
-
+      <Navbar />
       {/* Page Content */}
       <main className="relative z-10">
         {/* Hero Section */}
         <section >
           <Hero />
-          
+
         </section>
 
 
