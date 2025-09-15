@@ -21,11 +21,11 @@ export default function HeroContent() {
 
     // Fade out later (before screen edge)
     const titleOpacity = useTransform(scrollY, [0, 300], [1, 0]);
-    const titleY = useTransform(scrollY, [0, 150], [0, -30]);
+    const titleY = useTransform(scrollY, [0, 150], [0, -45]);
     const paragraphOpacity = useTransform(scrollY, [0, 400], [1, 0]);
-    const paragraphY = useTransform(scrollY, [0, 250], [0, -30]);
+    const paragraphY = useTransform(scrollY, [0, 250], [0, -45]);
     const buttonOpacity = useTransform(scrollY, [0, 400], [1, 0]);
-    const buttonY = useTransform(scrollY, [0, 300], [0, -30]);
+    const buttonY = useTransform(scrollY, [0, 300], [0, -45]);
 
     const { ref: inViewRef, inView } = useInView({ threshold: 0.3, triggerOnce: false });
 

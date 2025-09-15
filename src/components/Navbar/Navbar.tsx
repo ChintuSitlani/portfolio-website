@@ -3,13 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <>
             {/* Hamburger Button */}
             <div className="fixed top-4 right-4 z-50">
                 <motion.button
                     onClick={() => setIsOpen(!isOpen)}
+                    onHoverStart={() => setIsHovered(true)}
+                    onHoverEnd={() => setIsHovered(false)}
                     className="p-2 rounded-lg bg-[#000000] text-white focus:outline-none flex items-center justify-center"
                     whileHover={{
                         scale: 1.1,
@@ -23,23 +25,29 @@ export default function Navbar() {
                         {/* Top Line */}
                         <motion.span
                             initial={false}
-                            animate={{
-                                rotate: isOpen ? 45 : 0,
-                                y: isOpen ? 2 : -4, // moves down a bit when forming X
-                            }}
+                            animate={
+                                isOpen
+                                    ? { rotate: 45, y: 0 }
+                                    : isHovered
+                                        ? { rotate: 12, x: 0 }
+                                        : { rotate: 0, y: 0 }
+                            }
                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="absolute block w-6 h-0.5 bg-white rounded"
+                            className="absolute block w-8 h-0.5 bg-white rounded"
                         />
 
                         {/* Bottom Line */}
                         <motion.span
                             initial={false}
-                            animate={{
-                                rotate: isOpen ? -45 : 0,
-                                y: isOpen ? -2 : 4, // moves up a bit when forming X
-                            }}
+                            animate={
+                                isOpen
+                                    ? { rotate: -45, y: 0 }
+                                    : isHovered
+                                        ? { rotate: -12, x: 0 }
+                                        : { rotate: 0, y: 10 }
+                            }
                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="absolute block w-6 h-0.5 bg-white rounded"
+                            className="absolute block w-8 h-0.5 bg-white rounded"
                         />
                     </div>
                 </motion.button>

@@ -8,8 +8,8 @@ type HeroStatsProps = {
 };
 
 const stats = [
-    { number: "3+", label: "Years of Experience" },
-    { number: "7+", label: "Completed Projects" },
+    { number: "1+", label: "Years of Experience" },
+    { number: "4+", label: "Completed Projects" },
 ];
 
 export default function HeroStats({ layout = "col" }: HeroStatsProps) {
@@ -29,7 +29,7 @@ export default function HeroStats({ layout = "col" }: HeroStatsProps) {
     const ySpring = useSpring(yTransform, { stiffness: 100, damping: 30 });
 
     const statOpacity = useTransform(scrollY, [0, 400], [1, 0]);
-    const statY = useTransform(scrollY, [0, 250], [0, -30]);
+    const statY = useTransform(scrollY, [0, 250], [0, -45]);
 
     const isRow = layout === "row";
 

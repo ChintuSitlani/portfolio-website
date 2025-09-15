@@ -22,7 +22,6 @@ const Background: React.FC = () => {
 
         let stars: Star[] = [];
 
-        // Regular function instead of useCallback
         const createStars = () => {
             const numStars = Math.min(Math.floor(window.innerWidth / 20), 120);
             stars = [];
@@ -31,14 +30,13 @@ const Background: React.FC = () => {
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
                     radius: Math.random() * 1.2 + 0.3,
-                    speed: Math.random() * 0.4 + 0.2,
+                    speed: Math.random() * 0.5 + 0.5,
                     alpha: Math.random(),
                     alphaChange: (Math.random() * 0.02) - 0.01,
                 });
             }
         };
 
-        // Regular function instead of useCallback
         const resizeCanvas = () => {
             if (!canvas) return;
             canvas.width = window.innerWidth;
