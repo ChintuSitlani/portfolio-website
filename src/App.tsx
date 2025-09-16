@@ -1,4 +1,5 @@
 import "./App.css";
+import AboutMe from "./components/AboutMe/AboutMe";
 import Background from "./components/Background/Backround";
 import Hero from "./components/Hero/Hero";
 
@@ -9,21 +10,14 @@ function App() {
       <Background />
 
       {/* Page Content */}
-      <main className="relative z-10">
+      <main className="relative z-10 px-4 md:px-8 lg:px-12">
         {/* Hero Section */}
-        <section >
+        <section>
           <Hero />
-          
         </section>
-
 
         {/* About Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center bg-transparent">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <p className="max-w-2xl text-center">
-            I’m a developer passionate about automation, e-commerce, and building clean UIs.
-          </p>
-        </section>
+        <AboutMe />
 
         {/* Skills Section */}
         <section className="min-h-screen flex flex-col items-center justify-center bg-transparent">
@@ -48,6 +42,7 @@ function App() {
         </section>
       </main>
     </div>
+
   );
 }
 

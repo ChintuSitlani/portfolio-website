@@ -1,21 +1,15 @@
 import type { Variants, Transition } from "framer-motion";
 
 export const transition: Transition = {
-  duration: 1.2,
+  duration: 0.8,
   ease: "easeOut",
 };
 
 export const containerVariants: Variants = {
+  hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.4,
-      when: "beforeChildren",
-    },
-  },
-  hidden: {
-    transition: {
       staggerChildren: 0.3,
-      staggerDirection: -1,
     },
   },
 };
