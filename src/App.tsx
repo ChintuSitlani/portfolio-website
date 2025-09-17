@@ -2,6 +2,7 @@ import "./App.css";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Background from "./components/Background/Backround";
 import Hero from "./components/Hero/Hero";
+import MyStack from "./components/MyStack/MyStack";
 import Navbar from "./components/SideMenu/NavBar";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <div className="relative text-white">
       {/* Starfield Background (fixed) */}
       <Background />
-      <Navbar/>
+      <Navbar />
       {/* Page Content */}
       <main className="relative z-10 px-4 md:px-8 lg:px-12">
         {/* Hero Section */}
@@ -18,19 +19,13 @@ function App() {
         </section>
 
         {/* About Section */}
-        <AboutMe />
-
-        {/* Skills Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center bg-transparent">
-          <h2 className="text-4xl font-bold mb-4">Skills</h2>
-          <ul className="grid grid-cols-2 gap-6 text-lg">
-            <li>Angular 19</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>MongoDB</li>
-            <li>Tailwind</li>
-            <li>Express</li>
-          </ul>
+        <section className="mb-20 md:mb-50">
+          <AboutMe />
+        </section>
+        
+        {/* My Stack Section */}
+        <section>
+          <MyStack />
         </section>
 
         {/* Experience Section */}

@@ -3,14 +3,14 @@ import AboutMeTopContent from "./AboutMeTopContent";
 
 export default function AboutMe() {
     return (
-        <div>
+        <>
             <div>
                 <AboutMeTopContent />
             </div>
             <div>
                 <AboutMeBottomContent/>
             </div>
-        </div>
+        </>
 
     );
 }
