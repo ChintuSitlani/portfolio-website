@@ -4,6 +4,7 @@ import Background from "./components/Background/Backround";
 import Experience from "./components/Experience/Experience";
 import Hero from "./components/Hero/Hero";
 import MyStack from "./components/MyStack/MyStack";
+import Project from "./components/Project/Projects";
 import Navbar from "./components/SideMenu/NavBar";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         <section className="mb-20 md:mb-50">
           <AboutMe />
         </section>
-        
+
         {/* My Stack Section */}
         <section className="mb-20 md:mb-50">
           <MyStack />
@@ -31,7 +32,12 @@ function App() {
 
         {/* Experience Section */}
         <section className="mb-20 md:mb-50">
-          <Experience/>
+          <Experience />
+        </section>
+
+        {/* Project Section */}
+        <section className="mb-20 md:mb-50">
+          <Project />
         </section>
       </main>
     </div>

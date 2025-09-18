@@ -60,16 +60,16 @@ export default function Experience() {
                         className="grid gap-10 mt-12"
                     >
                         <div>
-                            <p className="text-base md:text-xl text-muted-foreground">{exp.company}</p>
+                            <p className="text-base md:text-xl text-gray-400">{exp.company}</p>
 
                             <h1 className="font-['Anton'] text-grey-300 text-3xl md:text-5xl mt-3.5 mb-2.5">
                                 {exp.position}
                             </h1>
 
-                            <p className="text-base md:text-lg text-muted-foreground">
+                            <p className="text-base md:text-lg text-gray-400">
 
                                 <span>{exp.from} </span> - <span>{exp.to}</span>{" "}
-                                <span className="italic text-sm text-muted-foreground">
+                                <span className="italic text-sm text-gray-400">
                                     ({calculateDuration(exp.from, exp.to)})
                                 </span>
 
