@@ -1,6 +1,7 @@
 import "./App.css";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Background from "./components/Background/Backround";
+import Experience from "./components/Experience/Experience";
 import Hero from "./components/Hero/Hero";
 import MyStack from "./components/MyStack/MyStack";
 import Navbar from "./components/SideMenu/NavBar";
@@ -24,17 +25,13 @@ function App() {
         </section>
         
         {/* My Stack Section */}
-        <section>
+        <section className="mb-20 md:mb-50">
           <MyStack />
         </section>
 
         {/* Experience Section */}
-        <section className="min-h-screen flex flex-col items-center justify-center bg-transparent">
-          <h2 className="text-4xl font-bold mb-4">Experience</h2>
-          <p className="max-w-2xl text-center">
-            Worked as a Junior Developer customizing Angular, PHP, and Microsoft Dynamics Business Central.
-            Built CRM, Retail POS, and E-commerce systems.
-          </p>
+        <section className="mb-20 md:mb-50">
+          <Experience/>
         </section>
       </main>
     </div>
