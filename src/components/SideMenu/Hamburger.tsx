@@ -1,11 +1,11 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 interface HamburgerButtonProps {
-  isOpen: boolean;
-  setIsOpen: (value: boolean) => void;
+    isOpen: boolean;
+    setIsOpen: (value: boolean) => void;
 }
-export default function HamburgerButton({ isOpen, setIsOpen }: HamburgerButtonProps){
+export default function HamburgerButton({ isOpen, setIsOpen }: HamburgerButtonProps) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -34,8 +34,10 @@ export default function HamburgerButton({ isOpen, setIsOpen }: HamburgerButtonPr
                                     : { rotate: 0, y: 0 }
                         }
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="absolute block w-6 h-0.5 bg-white rounded"
+                        className="absolute block w-6 h-[3px] bg-gray-100 rounded-full z-50"
+                        style={{ opacity: 1 }}
                     />
+
                     <motion.span
                         initial={false}
                         animate={
@@ -46,8 +48,10 @@ export default function HamburgerButton({ isOpen, setIsOpen }: HamburgerButtonPr
                                     : { rotate: 0, y: 10 }
                         }
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="absolute block w-6 h-0.5 bg-white rounded"
+                        className="absolute block w-6 h-[3px] bg-gray-100 rounded-full z-50"
+                        style={{ opacity: 1 }}
                     />
+
                 </div>
             </motion.button>
         </div>

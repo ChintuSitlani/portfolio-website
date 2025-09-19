@@ -41,7 +41,7 @@ export default function HeroContent() {
             ref={setRefs}
             className="flex flex-col justify-center items-start 
   max-w-[544px] lg:max-w-[600px] xl:max-w-[700px]
-  px-2 sm:px-4 md:px-6 lg:px-8 min-h-[70vh] md:min-h-screen pt-10 md:pt-0"
+  px-2 sm:px-4 md:px-6 lg:px-8 min-h-[60vh] md:min-h-screen pt-10 md:pt-0"
         >
             <motion.div style={{ y: isMobile ? 0 : ySpring }} className="relative w-full">
                 <motion.div
@@ -75,17 +75,24 @@ export default function HeroContent() {
                     </motion.div>
 
                     {/* Button */}
-                    <motion.div style={{ opacity: buttonOpacity, y: buttonY }} variants={fadeSlideUp}>
+                    <motion.div
+                        style={{ opacity: buttonOpacity, y: buttonY }}
+                        variants={fadeSlideUp}
+                    >
                         <motion.button
                             className="px-6 py-3 bg-green-500 text-white font-medium rounded-lg
-                hover:bg-green-600 transition-colors text-sm md:text-base
-                shadow-lg shadow-green-500/20 hover:shadow-green-500/40"
+        hover:bg-green-600 transition-colors text-sm md:text-base
+        shadow-lg shadow-green-500/20 hover:shadow-green-500/40"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
+                            onClick={() => {
+                                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                            }}
                         >
                             View My Work
                         </motion.button>
                     </motion.div>
+
                 </motion.div>
             </motion.div>
         </section>
