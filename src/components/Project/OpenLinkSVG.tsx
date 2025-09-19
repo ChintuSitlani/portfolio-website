@@ -1,11 +1,21 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function OpenLinkIcon({ isHovered }: { isHovered: boolean }) {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
     return (
         <motion.svg
             xmlns="http://www.w3.org/2000/svg"
-            width="36"
-            height="36"
+            width={isMobile? 24 : 36}
+            height={isMobile? 24 : 36}
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -34,7 +44,7 @@ export default function OpenLinkIcon({ isHovered }: { isHovered: boolean }) {
                 d="M15 3h6v6"
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={isHovered ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut", delay: isHovered ? 1 : 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut", delay: isHovered ? 0.8 : 0 }}
             />
         </motion.svg>
     );

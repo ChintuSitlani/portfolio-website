@@ -1,23 +1,26 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import OpenLinkIcon from "./OpenLinkSVG";
 
-export default function ProjectTitle({ project }: { project: any }) {
-    const [isHovered, setIsHovered] = useState(false);
+type projectTitleProps = {
+    project: {
+        name: string;
+        images: string[];
+        link: string;
+        tech: string[];
+    };
+    isHovered: boolean;
+};
 
+export default function ProjectTitle({ project, isHovered }: projectTitleProps) {
     return (
-        <div
-            className="flex items-center gap-2"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
-            {/* Project Name with hover animation */}
+        <div className="flex items-center gap-2 relative">
+            {/* Project Name with sliding color animation */}
             <motion.div
-                className="relative text-5xl font-['Anton'] text-gray-300 overflow-hidden inline-block"
-                whileHover={{
-                    "--gradient-size": "100%",
-                    transition: { duration: 0.5, ease: "linear" },
+                className="relative text-3xl md:text-5xl font-['Anton'] text-gray-300 overflow-hidden inline-block"
+                animate={{
+                    "--gradient-size": isHovered ? "100%" : "0%",
                 }}
+                transition={{ duration: 0.5, ease: "linear" }}
                 style={{ "--gradient-size": "0%" } as React.CSSProperties}
             >
                 {project.name}
@@ -32,7 +35,8 @@ export default function ProjectTitle({ project }: { project: any }) {
                     {project.name}
                 </span>
             </motion.div>
-            {/* Open link icon (only animates on hover) */}
+
+            {/* Open link icon */}
             <OpenLinkIcon isHovered={isHovered} />
         </div>
     );

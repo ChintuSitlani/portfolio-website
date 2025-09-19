@@ -16,30 +16,31 @@ function App() {
       {/* Page Content */}
       <main className="relative z-10 px-4 md:px-8 lg:px-12">
         {/* Hero Section */}
-        <section>
+        <section id="home">
           <Hero />
         </section>
 
         {/* About Section */}
-        <section className="mb-20 md:mb-50">
+        <section id="about" className="mb-20 md:mb-50">
           <AboutMe />
         </section>
 
         {/* My Stack Section */}
-        <section className="mb-20 md:mb-50">
+        <section id="stack" className="mb-20 md:mb-50">
           <MyStack />
         </section>
 
         {/* Experience Section */}
-        <section className="mb-20 md:mb-50">
+        <section id="experience" className="mb-20 md:mb-50">
           <Experience />
         </section>
 
         {/* Project Section */}
-        <section className="mb-20 md:mb-50">
+        <section id="projects" className="mb-20 md:mb-50">
           <Project />
         </section>
       </main>
+
     </div>
 
   );

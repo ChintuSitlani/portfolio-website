@@ -8,8 +8,8 @@ type HeroStatsProps = {
 };
 
 const stats = [
-    { number: "3+", label: "Years of Experience" },
-    { number: "7+", label: "Completed Projects" },
+    { number: "1+", label: "Years of Experience" },
+    { number: "4+", label: "Completed Projects" },
 ];
 
 export default function HeroStats({ layout = "col" }: HeroStatsProps) {
