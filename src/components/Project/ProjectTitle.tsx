@@ -16,7 +16,7 @@ export default function ProjectTitle({ project, isHovered }: projectTitleProps) 
         <div className="flex items-center gap-2 relative">
             {/* Project Name with sliding color animation */}
             <motion.div
-                className="relative text-3xl md:text-5xl font-['Anton'] text-gray-300 overflow-hidden inline-block"
+                className="relative text-4xl md:text-5xl font-['Anton'] text-gray-300 overflow-hidden inline-block"
                 animate={{
                     "--gradient-size": isHovered ? "100%" : "0%",
                 }}

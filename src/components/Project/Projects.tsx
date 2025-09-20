@@ -13,9 +13,9 @@ export default function Project() {
             tech: ["Angular", "ExpressJS", "MongoDB"],
             link: "https://e-commerce-six-ecru-38.vercel.app/buyer-home",
             images: [
-                "public/e-commerceapp/E-commerce_buyer-home.webp",
-                "public/e-commerceapp/E-commerce_product-detail-page.webp",
-                "public/e-commerceapp/E-commerce_search-page.webp"
+                "/e-commerceapp/E-commerce_buyer-home.webp",
+                "/e-commerceapp/E-commerce_product-detail-page.webp",
+                "/e-commerceapp/E-commerce_search-page.webp"
             ]
         },
         {
@@ -23,15 +23,18 @@ export default function Project() {
             tech: ["NextJS", "Tailwind", "JWT Auth"],
             link: "https://taskboard-app-five.vercel.app",
             images: [
-                "public/taskboardapp/taskboard-dashboard.webp",
-                "public/taskboardapp/taskboard-board.webp"
+                "/taskboardapp/taskboard-dashboard.webp",
+                "/taskboardapp/taskboard-board.webp"
             ]
         },
         {
             name: "Paytm Clone",
             tech: ["React", "Tailwind", "Render"],
             link: "https://github/chintu-sitlani/paytm-clone",
-            images: [""]
+            images: [
+                "/paytm/dashboard.webp",
+                "/paytm/Transfer.webp"
+            ]
 
         },
     ];

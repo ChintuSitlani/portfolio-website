@@ -65,14 +65,14 @@ export default function MyStack() {
                     >
                         {/* Title */}
                         <motion.div variants={fadeSlideUp} className="md:col-span-5">
-                            <h2 className="font-['Anton'] text-gray-300 text-3xl md:text-5xl">
+                            <h2 className="font-['Anton'] text-gray-300 text-5xl">
                                 {stack.title}
                             </h2>
                         </motion.div>
 
                         {/* Items */}
                         <motion.div
-                            className="md:col-span-8 text-sm md:text-lg flex flex-wrap gap-x-11 gap-y-9"
+                            className="md:col-span-8 text-lg flex flex-wrap gap-x-6 md:gap-x-11 gap-y-9"
                             variants={containerVariants} // parent controls stagger
                         >
                             {stack.items.map((item, index) => (
@@ -87,7 +87,7 @@ export default function MyStack() {
                                         loading="lazy"
                                         className="mr-2 w-6 h-6 md:w-10 md:h-10 object-contain"
                                     />
-                                    <span className="text-sm md:text-2xl capitalize">
+                                    <span className="text-2xl capitalize">
                                         {item.name}
                                     </span>
                                 </motion.div>

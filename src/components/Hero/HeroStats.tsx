@@ -58,7 +58,7 @@ export default function HeroStats({ layout = "col" }: HeroStatsProps) {
                             className={`flex flex-col ${isRow ? "items-center text-center" : "items-end"}`}
                         >
                             <h1
-                                className="font-['Anton'] text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-500"
+                                className="font-['Anton'] text-3xl sm:text-3xl md:text-4xl lg:text-4xl text-green-600"
                             >
                                 {stat.number}
                             </h1>
