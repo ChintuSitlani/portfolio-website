@@ -5,7 +5,8 @@ type projectTitleProps = {
     project: {
         name: string;
         images: string[];
-        link: string;
+        demoLink: string;
+        repoLink: string;
         tech: string[];
     };
     isHovered: boolean;

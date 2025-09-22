@@ -2,6 +2,7 @@ import "./App.css";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Background from "./components/Background/Backround";
 import Experience from "./components/Experience/Experience";
+import GetInTouch from "./components/GetInTouch/GetInTouch";
 import Hero from "./components/Hero/Hero";
 import MyStack from "./components/MyStack/MyStack";
 import Project from "./components/Project/Projects";
@@ -38,6 +39,10 @@ function App() {
         {/* Project Section */}
         <section id="projects" className="mb-20 md:mb-50">
           <Project />
+        </section>
+        {/* Get In Touch Section */}
+        <section id="getInTouch" >
+          <GetInTouch />
         </section>
       </main>
 

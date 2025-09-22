@@ -11,7 +11,8 @@ export default function Project() {
         {
             name: "E-commerce",
             tech: ["Angular", "ExpressJS", "MongoDB"],
-            link: "https://e-commerce-six-ecru-38.vercel.app/buyer-home",
+            demoLink: "https://e-commerce-six-ecru-38.vercel.app/buyer-home",
+            repoLink:"https://github.com/ChintuSitlani/E-commerce",
             images: [
                 "/e-commerceapp/E-commerce_buyer-home.webp",
                 "/e-commerceapp/E-commerce_product-detail-page.webp",
@@ -21,7 +22,8 @@ export default function Project() {
         {
             name: "Task Board",
             tech: ["NextJS", "Tailwind", "JWT Auth"],
-            link: "https://taskboard-app-five.vercel.app",
+            demoLink: "https://taskboard-app-five.vercel.app",
+            repoLink:"https://github.com/ChintuSitlani/portfolio-website",
             images: [
                 "/taskboardapp/taskboard-dashboard.webp",
                 "/taskboardapp/taskboard-board.webp"
@@ -29,11 +31,13 @@ export default function Project() {
         },
         {
             name: "Paytm Clone",
-            tech: ["React", "Tailwind", "Render"],
-            link: "https://github/chintu-sitlani/paytm-clone",
+            tech: ["React", "Tailwind", ""],
+            demoLink: "https://github.com/ChintuSitlani/Paytm-builder",
+            repoLink: "https://github.com/ChintuSitlani/Paytm-builder",
             images: [
                 "/paytm/dashboard.webp",
-                "/paytm/Transfer.webp"
+                "/paytm/sendMoney.webp",
+                "/paytm/signup.webp"
             ]
 
         },
@@ -61,7 +65,7 @@ export default function Project() {
                             animate={inView ? "show" : "hidden"}
                             className="flex flex-col md:gap-10"
                         >
-                            <a href={project.link} target="_blank" rel="noopener noreferrer"
+                            <a href={project.demoLink} target="_blank" rel="noopener noreferrer"
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
                             >
