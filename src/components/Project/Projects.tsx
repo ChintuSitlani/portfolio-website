@@ -39,7 +39,6 @@ export default function Project() {
                 "/paytm/sendMoney.webp",
                 "/paytm/signup.webp"
             ]
-
         },
     ];
 
