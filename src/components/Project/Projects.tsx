@@ -31,7 +31,7 @@ export default function Project() {
         },
         {
             name: "Paytm Clone",
-            tech: ["React", "Tailwind", ""],
+            tech: ["React", "Recoil", "Lodash"],
             demoLink: "https://github.com/ChintuSitlani/Paytm-builder",
             repoLink: "https://github.com/ChintuSitlani/Paytm-builder",
             images: [
