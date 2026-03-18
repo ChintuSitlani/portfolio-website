@@ -12,9 +12,9 @@ export default function MyStack() {
                 { name: "TypeScript", img: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
                 { name: "React", img: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
                 { name: "Next.js", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV9uzErWz9EXqZDxZ5lP9aYpMz8eK6rr5X3w&s" },
-                { name: "Angular", img: "https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" },
+                { name: "Angular", img: "https://www.svgrepo.com/show/353396/angular-icon.svg" },
                 { name: "Recoil", img: "https://cdn.worldvectorlogo.com/logos/recoil-js.svg" },
-                { name: "Framer Motion", img: "https://seeklogo.com/images/F/framer-motion-logo-DA1E33CAA1-seeklogo.com.png" },
+                { name: "Framer Motion", img: "https://images.seeklogo.com/logo-png/44/2/framer-motion-logo-png_seeklogo-446185.png" },
                 { name: "Bootstrap", img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" },
                 { name: "Tailwind", img: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" },
             ],
@@ -29,10 +29,10 @@ export default function MyStack() {
         {
             title: "DATABASE",
             items: [
-                { name: "Prisma", img: "https://seeklogo.com/images/P/prisma-logo-3805665B69-seeklogo.com.png" },
+                { name: "Prisma", img: "https://www.svgrepo.com/show/373776/light-prisma.svg" },
                 { name: "SQL", img: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" },
                 { name: "PostgreSQL", img: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" },
-                { name: "MongoDB", img: "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" },
+                { name: "MongoDB", img: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1-1.svg" },
             ],
         },
         {
@@ -40,6 +40,8 @@ export default function MyStack() {
             items: [
                 { name: "Git", img: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" },
                 { name: "Docker", img: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" },
+                { name: "Chat GPT", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/960px-ChatGPT_logo.svg.png" },
+                { name: "Cluade AI", img: "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/claude-color.png" },
             ],
         },
     ];

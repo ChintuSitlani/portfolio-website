@@ -7,7 +7,7 @@ export default function AboutMeBottomContent() {
     const { ref, inView } = useInViewFade(0.3);
 
     const paragraphLines = [
-        "I am a software developer committed to transforming ideas into efficient and reliable solutions.",
+        "I am a software engineer committed to transforming ideas into efficient and reliable solutions.",
         "My approach emphasizes code quality, maintainability, and best practices, ensuring solutions are robust, secure, and adaptable.",
         "By focusing on performance, usability, and reliability, I aim to deliver software that not only meets requirements but also drives meaningful results."
     ];

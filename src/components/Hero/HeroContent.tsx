@@ -57,7 +57,7 @@ export default function HeroContent() {
                             className="font-['Anton'] text-5xl sm:text-6xl lg:text-7xl leading-[1] mb-6"
                         >
                             <span className="text-green-600 block">SOFTWARE</span>
-                            <span className="ml-2 sm:ml-2 md:ml-3 lg:ml-4 text-white block">DEVELOPER</span>
+                            <span className="ml-2 sm:ml-2 md:ml-3 lg:ml-4 text-white block">ENGINEER</span>
                         </motion.h1>
                     </motion.div>
 
@@ -69,7 +69,7 @@ export default function HeroContent() {
                 mb-6 text-gray-300 max-w-[90%] sm:max-w-[80%] md:max-w-none"
                         >
                             Hi! I'm <span className="font-semibold text-green-400">Chandra Prakash Sitlani</span>.
-                            A creative Full-Stack Developer with 1+ years of experience in building
+                            A creative Software Engineer with apx. 2 years of experience in building
                             high-performance, scalable, and responsive web solutions.
                         </motion.p>
                     </motion.div>

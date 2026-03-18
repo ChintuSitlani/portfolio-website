@@ -6,9 +6,9 @@ import { fadeSlideUp } from "../../utils/animation";
 export default function Experience() {
     const experiences = [
         {
-            company: "Itos Pvt. Ltd.",
-            position: "Software Developer",
-            from: "June, 2022",
+            company: "Itos Software Solution",
+            position: "Software Engineer",
+            from: "March, 2022",
             to: "Nov, 2023"
         }
     ];

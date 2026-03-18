@@ -8,7 +8,7 @@ type HeroStatsProps = {
 };
 
 const stats = [
-    { number: "1+", label: "Years of Experience" },
+    { number: "2 (apx.)", label: "Years of Experience" },
     { number: "4+", label: "Completed Projects" },
 ];
 
